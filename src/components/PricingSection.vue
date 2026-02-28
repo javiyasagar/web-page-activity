@@ -1,12 +1,12 @@
 <template>
-  <section id="pricing" class="py-20 bg-slate-50">
+  <section id="pricing" class="py-20 bg-slate-50 dark:bg-slate-950">
     <div class="container mx-auto px-6">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100 mb-4">
           Choose Your Safety Plan
         </h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
           Select the perfect plan for your organization's safety culture journey
         </p>
       </div>
@@ -58,7 +58,7 @@
       
       <!-- Additional Info -->
       <div class="text-center mt-12">
-        <p class="text-slate-600">
+        <p class="text-slate-600 dark:text-slate-300">
           All plans include 
           <span class="font-semibold text-emerald-500">30-day money-back guarantee</span>
         </p>

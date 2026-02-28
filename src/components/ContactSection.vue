@@ -1,12 +1,12 @@
 <template>
-  <section id="contact" class="py-20 bg-white">
+  <section id="contact" class="py-20 bg-white dark:bg-slate-900">
     <div class="container mx-auto px-6">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100 mb-4">
           Get in Touch
         </h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
           Ready to transform your organization's safety culture? Let's start the conversation.
         </p>
       </div>
@@ -16,7 +16,7 @@
         <form @submit.prevent="handleSubmit" class="space-y-6">
           <!-- Name Field -->
           <div>
-            <label for="name" class="block text-sm font-medium text-slate-700 mb-2">
+            <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">
               Name *
             </label>
             <input
@@ -24,7 +24,7 @@
               v-model="form.name"
               type="text"
               required
-              class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
               :class="{ 'border-red-500': errors.name }"
               placeholder="John Doe"
             />
@@ -35,7 +35,7 @@
           
           <!-- Email Field -->
           <div>
-            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
+            <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">
               Email *
             </label>
             <input
@@ -43,7 +43,7 @@
               v-model="form.email"
               type="email"
               required
-              class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
               :class="{ 'border-red-500': errors.email }"
               placeholder="john@example.com"
             />
@@ -54,7 +54,7 @@
           
           <!-- Message Field -->
           <div>
-            <label for="message" class="block text-sm font-medium text-slate-700 mb-2">
+            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">
               Message *
             </label>
             <textarea
@@ -62,7 +62,7 @@
               v-model="form.message"
               rows="5"
               required
-              class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200 resize-none"
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200 resize-none"
               :class="{ 'border-red-500': errors.message }"
               placeholder="Tell us about your safety culture needs..."
             ></textarea>
@@ -93,13 +93,13 @@
         <!-- Success Message -->
         <div
           v-if="showSuccess"
-          class="mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl"
+          class="mt-6 p-4 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900 rounded-xl"
         >
           <div class="flex items-center space-x-3">
             <svg class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <p class="text-emerald-800 font-medium">
+            <p class="text-emerald-800 dark:text-emerald-200 font-medium">
               Thank you for your message! We'll get back to you within 24 hours.
             </p>
           </div>
