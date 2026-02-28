@@ -4,7 +4,7 @@
     :class="[
       featured 
         ? 'bg-gradient-to-br from-blue-800 to-emerald-500 text-white shadow-2xl scale-105' 
-        : 'bg-white shadow-lg border border-slate-200'
+        : 'bg-white dark:bg-slate-900 shadow-lg border border-slate-200 dark:border-slate-700'
     ]"
   >
     <!-- Featured Badge -->
@@ -16,16 +16,16 @@
     </div>
     
     <!-- Plan Name -->
-    <h3 class="text-2xl font-bold mb-2" :class="featured ? 'text-white' : 'text-slate-800'">
+    <h3 class="text-2xl font-bold mb-2" :class="featured ? 'text-white' : 'text-slate-800 dark:text-slate-100'">
       {{ name }}
     </h3>
     
     <!-- Price -->
     <div class="mb-6">
-      <span class="text-4xl font-bold" :class="featured ? 'text-white' : 'text-slate-800'">
+      <span class="text-4xl font-bold" :class="featured ? 'text-white' : 'text-slate-800 dark:text-slate-100'">
         ${{ price }}
       </span>
-      <span class="text-slate-600" :class="featured ? 'text-white/80' : ''">
+      <span class="text-slate-600 dark:text-slate-300" :class="featured ? 'text-white/80' : ''">
         /month
       </span>
     </div>
@@ -36,7 +36,7 @@
         v-for="feature in features" 
         :key="feature"
         class="flex items-center space-x-3"
-        :class="featured ? 'text-white/90' : 'text-slate-600'"
+        :class="featured ? 'text-white/90' : 'text-slate-600 dark:text-slate-300'"
       >
         <svg 
           class="w-5 h-5 flex-shrink-0" 
